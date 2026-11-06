@@ -14,16 +14,18 @@
 <style>
 :root{--bg:#050608;--bg2:#0d1118;--gold:#e0b440;--gold2:#f6dc8a;--blue:#2a9bff;--text:#f4f1ea;--mute:#a9b0bb;--line:#2a2415;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,sans-serif;line-height:1.6}
 h1,h2,h3{font-family:Cinzel,Georgia,serif;margin:0;line-height:1.15}
 a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 header{position:sticky;top:0;z-index:10;background:rgba(5,6,8,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:88px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Cinzel,serif;font-weight:700;color:var(--gold)}
-.brand img{width:44px;height:44px;border-radius:50%}
+.brand{font-size:1.1rem}
+.brand img{width:68px;height:68px;border-radius:50%}
+@media(max-width:560px){header .wrap{height:76px}.brand img{width:56px;height:56px}.brand{font-size:.95rem}}
 nav{display:flex;gap:22px;font-size:.9rem}
 nav a{text-decoration:none;color:var(--mute)}
 nav a:hover,nav a:focus-visible{color:var(--gold2)}
@@ -291,6 +293,10 @@ els.forEach(function(el,i){el.classList.add('rv');el.style.transitionDelay=((i%4
 </script>
 <script>
 (function(){
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+if(location.hash&&history.replaceState)history.replaceState(null,'',location.pathname+location.search);
+window.scrollTo(0,0);
+addEventListener('load',function(){window.scrollTo(0,0);});
 var root=document.documentElement;
 root.style.scrollBehavior='auto';
 var raf=0;
@@ -322,7 +328,6 @@ e.preventDefault();
 var hd=document.querySelector('header');
 var off=(hd?hd.offsetHeight:64)+8;
 scrollToY(el?el.getBoundingClientRect().top+window.pageYOffset-off:0);
-if(history.pushState)history.pushState(null,'',id?'#'+id:location.pathname+location.search);
 });
 })();
 </script>
