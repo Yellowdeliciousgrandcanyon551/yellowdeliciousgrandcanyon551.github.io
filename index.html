@@ -4,12 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rainha Caça Vazamento | Tecnologia, Precisão e Solução</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#050608">
 <meta name="description" content="Detecção de vazamentos sem quebra-quebra, com aparelhos modernos. Atendimento para residências, condomínios e empresas.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:ital,wght@0,400;0,600;1,800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#050608;--bg2:#0d1118;--gold:#e0b440;--gold2:#f6dc8a;--blue:#2a9bff;--text:#f4f1ea;--mute:#a9b0bb;--line:#2a2415;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,sans-serif;line-height:1.6}
 h1,h2,h3{font-family:Cinzel,Georgia,serif;margin:0;line-height:1.15}
@@ -180,7 +186,6 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mute);font-si
 <p class="lead">Usamos tecnologia para descobrir o ponto exato do problema antes de abrir qualquer parede.</p>
 <div class="grid">
 <div class="card"><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h8l5-13 8 26 7-18 4 5h8"/></svg><h3>Escuta acústica</h3><p>Geofones captam o som da água escapando do cano e indicam onde ele é mais forte.</p></div>
-<div class="card"><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="20" y="5" width="8" height="27" rx="4"/><circle cx="24" cy="37" r="7"/></svg><h3>Termografia</h3><p>Câmera térmica que mostra variações de temperatura causadas por umidade escondida.</p></div>
 <div class="card"><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="14" width="29" height="20" rx="4"/><path d="M33 22l11-6v16l-11-6z"/></svg><h3>Câmera de inspeção</h3><p>Imagens do interior de tubulações e ralos para confirmar a causa.</p></div>
 <div class="card"><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="26" r="16"/><path d="M24 26l8-9M24 10v4M10 26h4"/></svg><h3>Teste de pressão</h3><p>Verifica se a tubulação segura a pressão e isola o trecho com problema.</p></div>
 </div>
@@ -285,6 +290,44 @@ var els=document.querySelectorAll('section h2,.lead,.card,ol.steps li,details');
 if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
 els.forEach(function(el,i){el.classList.add('rv');el.style.transitionDelay=((i%4)*90)+'ms';io.observe(el);});
+})();
+</script>
+<script>
+(function(){
+var root=document.documentElement;
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+root.style.scrollBehavior='auto';
+var raf=0;
+function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;}
+function stop(){if(raf){cancelAnimationFrame(raf);raf=0;}}
+function scrollToY(y){
+stop();
+var max=Math.max(0,root.scrollHeight-innerHeight);
+y=Math.max(0,Math.min(y,max));
+var start=window.pageYOffset,dist=y-start;
+if(Math.abs(dist)<2){window.scrollTo(0,y);return;}
+var dur=Math.min(1200,Math.max(700,Math.abs(dist)*.55)),t0=null;
+function step(ts){
+if(t0===null)t0=ts;
+var p=Math.min((ts-t0)/dur,1);
+window.scrollTo(0,start+dist*ease(p));
+raf=p<1?requestAnimationFrame(step):0;
+}
+raf=requestAnimationFrame(step);
+}
+['wheel','touchstart','keydown','mousedown'].forEach(function(ev){addEventListener(ev,stop,{passive:true});});
+document.addEventListener('click',function(e){
+var a=e.target.closest?e.target.closest('a[href^="#"]'):null;
+if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;
+var id=decodeURIComponent(a.getAttribute('href').slice(1));
+var el=id?document.getElementById(id):null;
+if(id&&!el)return;
+e.preventDefault();
+var hd=document.querySelector('header');
+var off=(hd?hd.offsetHeight:64)+8;
+scrollToY(el?el.getBoundingClientRect().top+window.pageYOffset-off:0);
+if(history.pushState)history.pushState(null,'',id?'#'+id:location.pathname+location.search);
+});
 })();
 </script>
 </body>
